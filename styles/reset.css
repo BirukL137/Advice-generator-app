@@ -1,0 +1,24 @@
+/* Reset & Base Layer */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-950);
+  color: var(--blue-200);
+}

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  /* Colors */
+  --blue-200: hsl(193, 38%, 86%);
+  --green-300: hsl(150, 100%, 66%);
+  --blue-600: hsl(217, 19%, 38%);
+  --blue-900: hsl(217, 19%, 24%);
+  --blue-950: hsl(218, 23%, 16%);
+
+  /* Typography */
+  --fs-sm: 0.75rem;
+  --fs-md: 1.5rem;
+  --fs-lg: 1.75rem;
+  --fw-bold: 700;
+  --fw-bolder: 800;
+
+  /* Spacing */
+  --space-100: 0.5rem;
+  --space-200: 1rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+
+  /* Radius */
+  --radius-md: 0.5rem;
+  --radius-full: 50%;
+}
+
+/* Accessibility utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Advice card */
+.advice {
+  background-color: var(--blue-900);
+  width: clamp(295px, 90%, 34rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-200);
+  padding-block: var(--space-500);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+/* Advice ID */
+.advice__id {
+  color: var(--green-300);
+  text-transform: uppercase;
+  letter-spacing: 0.4ch;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+/* Advice text */
+.advice__text {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bolder);
+  width: 85%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.advice__text.fade {
+  opacity: 0;
+}
+
+/* Divider */
+.pattern-divider-icon {
+  margin-block: var(--space-200) var(--space-400);
+}
+
+/* Dice button */
+.advice__button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-full);
+  background-color: var(--green-300);
+  border: none;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.advice__button:hover {
+  box-shadow: 0 0 20px var(--green-300);
+}
+
+.advice__button:focus-visible {
+  outline: 3px solid var(--blue-200);
+  outline-offset: 4px;
+}
+
+.advice__button:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* Attribution */
+.attribution {
+  position: fixed;
+  bottom: 1%;
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  color: hsl(172, 67%, 45%);
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  text-decoration: underline;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .advice__text {
+    font-size: var(--fs-lg);
+  }
+}
