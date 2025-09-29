@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Advice Generator App</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main class="advice">
+      <!-- Hidden for screen readers -->
+      <h1 class="visually-hidden">Advice Generator App</h1>
+
+      <!-- Advice ID -->
+      <p class="advice__id">Advice <span id="advice-id">#000</span></p>
+
+      <!-- Advice text -->
+      <blockquote id="advice-text" class="advice__text">
+        <p>Loading advice...</p>
+      </blockquote>
+
+      <!-- Divider (mobile/desktop) -->
+      <picture class="pattern-divider-icon" aria-hidden="true">
+        <source
+          srcset="./images/pattern-divider-desktop.svg"
+          media="(min-width: 768px)"
+        />
+        <img src="./images/pattern-divider-mobile.svg" alt="" />
+      </picture>
+
+      <!-- Dice button -->
+      <button
+        type="button"
+        class="advice__button"
+        id="advice-btn"
+        aria-label="Get new advice"
+      >
+        <img src="./images/icon-dice.svg" alt="" aria-hidden="true" />
+      </button>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Biruk L.Debelie</a>.
+    </footer>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
